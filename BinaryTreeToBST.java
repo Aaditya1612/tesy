@@ -5,7 +5,6 @@ Using TreeSet in java to sort and store values of given Binary Tree and then ite
 All traversal in the following code has been done inorder.
 */
 
-
 class BinaryTreeToBST {
   // Class for defining structure of Nodes of Tree
   public class Node {
@@ -13,9 +12,9 @@ class BinaryTreeToBST {
     Node left, right;
 
     Node(int data) {
-    	this.data = data; // Initializing the current node data
-    	this.left = null; // Making left child null
-    	this.right = null; // Making right child null
+      this.data = data; // Initializing the current node data
+      this.left = null; // Making left child null
+      this.right = null; // Making right child null
     }
   }
   // Function to perform traversal of Tree (Inorder)
@@ -53,7 +52,7 @@ class BinaryTreeToBST {
   }
 
   // Function to convert a binary tree to BST by maintaining its original structure
-  
+
   public static void convertToBST(Node root) {
     // traverse the binary tree and store its nodes data in a set
     Set < Integer > set = new TreeSet < > ();
@@ -63,19 +62,19 @@ class BinaryTreeToBST {
     Iterator < Integer > it = set.iterator();
     binaryToBST(root, it);
   }
-  
-    // Generate Tree
-    public Node genTree(){
-        Node root = new Node(9);
-        root.left = new Node(4);
-        root.right = new Node(5);
-        root.left.left = new Node(15);
-        root.left.right = new Node(1);
-        root.right.left = new Node(3);
-        root.right.right = new Node(7);
-        
-        return root;
-    }
+
+  // Generate Tree
+  public Node genTree() {
+    Node root = new Node(9);
+    root.left = new Node(4);
+    root.right = new Node(5);
+    root.left.left = new Node(15);
+    root.left.right = new Node(1);
+    root.right.left = new Node(3);
+    root.right.right = new Node(7);
+
+    return root;
+  }
 
   public static void main(String[] args) {
     BinaryTreeToBST btobst = new BinaryTreeToBST();
@@ -89,4 +88,3 @@ class BinaryTreeToBST {
     traverse(root);
   }
 }
-
