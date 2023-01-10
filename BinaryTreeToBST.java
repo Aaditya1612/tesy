@@ -7,6 +7,17 @@ All traversal in the following code has been done inorder.
 
 
 class BinaryTreeToBST {
+  // Class for defining structure of Nodes of Tree
+  public class Node {
+    int data;
+    Node left, right;
+
+    Node(int data) {
+    	this.data = data; // Initializing the current node data
+    	this.left = null; // Making left child null
+    	this.right = null; // Making right child null
+    }
+  }
   // Function to perform traversal of Tree (Inorder)
   public static void traverse(Node root) {
     if (root == null) {
@@ -52,16 +63,23 @@ class BinaryTreeToBST {
     Iterator < Integer > it = set.iterator();
     binaryToBST(root, it);
   }
+  
+    // Generate Tree
+    public Node genTree(){
+        Node root = new Node(9);
+        root.left = new Node(4);
+        root.right = new Node(5);
+        root.left.left = new Node(15);
+        root.left.right = new Node(1);
+        root.right.left = new Node(3);
+        root.right.right = new Node(7);
+        
+        return root;
+    }
 
   public static void main(String[] args) {
-
-    Node root = new Node(9);
-    root.left = new Node(4);
-    root.right = new Node(5);
-    root.left.left = new Node(15);
-    root.left.right = new Node(1);
-    root.right.left = new Node(3);
-    root.right.right = new Node(7);
+    BinaryTreeToBST btobst = new BinaryTreeToBST();
+    Node root = btobst.genTree();
 
     System.out.println("Given Binary Tree: ");
     traverse(root);
@@ -72,14 +90,3 @@ class BinaryTreeToBST {
   }
 }
 
-// Class for defining structure of Nodes of Tree
-class Node {
-  int data;
-  Node left, right;
-
-  Node(int data) {
-    this.data = data; // Initializing the current node data
-    this.left = null; // Making left child null
-    this.right = null; // Making right child null
-  }
-}
