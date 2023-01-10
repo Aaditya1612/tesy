@@ -5,17 +5,6 @@ Using TreeSet in java to sort and store values of given Binary Tree and then ite
 All traversal in the following code has been done inorder.
 */
 
-// Class for defining structure of Nodes of Tree
-class Node {
-  int data;
-  Node left, right;
-
-  Node(int data) {
-    this.data = data; // Initializing the current node data
-    this.left = null; // Making left child null
-    this.right = null; // Making right child null
-  }
-}
 
 class BinaryTreeToBST {
   // Function to perform traversal of Tree (Inorder)
@@ -80,5 +69,17 @@ class BinaryTreeToBST {
     System.out.println("After converting to BST: ");
     convertToBST(root);
     traverse(root);
+  }
+}
+
+// Class for defining structure of Nodes of Tree
+class Node {
+  int data;
+  Node left, right;
+
+  Node(int data) {
+    this.data = data; // Initializing the current node data
+    this.left = null; // Making left child null
+    this.right = null; // Making right child null
   }
 }
