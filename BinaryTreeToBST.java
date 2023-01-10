@@ -17,7 +17,7 @@ class Node {
   }
 }
 
-class Main {
+class BinaryTreeToBST {
   // Function to perform traversal of Tree (Inorder)
   public static void traverse(Node root) {
     if (root == null) {
